@@ -8,9 +8,9 @@ export function filterLike(characters, prop, value) {
 
 
 export function sortByProp(characters, prop, upOrDown) {
-  return characters.sort((previos, next) => {
-    const az = previos[prop] > next[prop];
-    const za = previos[prop] < next[prop];
+  return characters.sort((current, next) => {
+    const az = current[prop] > next[prop];
+    const za = current[prop] < next[prop];
     const compare = upOrDown ? az : za;
     return compare ? 1 : -1;
   })
