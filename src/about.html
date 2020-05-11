@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header role="search" class="mainly__header">
+      <section class="menu__mainly">
+        <img src="./img/logo.png" alt="">
+        <nav id="menu-nav" class="menu__nav">
+          <i id="menu-open" class="icon-menu icon-open"></i>
+          <ul id="menu-navigate" class="menu__navigate">
+            <i id="menu-close" class="icon-cross icon-close"></i>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="">Curiosidades</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="menu">
+        <ul class="menu__items">
+          <li id="search-filter" class="filter__search animate">
+            <i id="search-icon" class="icon-search"></i>
+            <img id="search-nave" src="img/portal-search.png" class="search__nave">
+            <input id="search" type="text" class="search__character">
+          </li>
+          <li id="allCharacters" class="filter">All</li>
+          <li class="filter">
+            Status +
+            <ul id="statusFilter"></ul>
+          </li>
+          <li class="filter">
+            Species +
+            <ul id="speciesFilter"></ul>
+          </li>
+          <li id="sortFilter" class="filter">
+            Sort +
+            <ul>
+              <li id="sortByNameUp" class="sort">A-Z</li>
+              <li id="sortByNameDown" class="sort">Z-A</li>
+            </ul>
+          </li>
+          <li class="filter">
+            Gender +
+            <ul id="gendersFilter"></ul>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <main class="about__mainly">
+      <h1>About Rick and Morty</h1>
+      <p>
+        Rick and Morty is an American adult animated
+        science fiction sitcom created by Justin Roiland
+        and Dan Harmon for Cartoon Network's late-night
+        programming block Adult Swim. The series follows
+        the misadventures of cynical mad scientist Rick
+        Sanchez and his good-hearted but fretful grandson
+        Morty Smith, who split their time between domestic
+        life and interdimensional adventures.
+      </p>
+    </main>
+
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/style-menu.js" type="module"></script>
+  </body>
+
+</html>
