@@ -181,13 +181,38 @@ body {
   font-weight: 100;
 }
 
-@media (max-width: 960px) {
-  .menu__items li:hover ul {
-    display: flex;
-    overflow-x: scroll;
-    max-width: 400px;
-  }
+.about__mainly {
+  background-image: url(../img/buracoper.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.about__mainly h1,
+.about__mainly p {
+  color: #fff;
+  background-color: #000;
+  font-weight: 900;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+.about__mainly h1 {
+  width: 100%;
+  font-size: 25px;
+}
+
+.about__mainly p {
+  padding: 0px 20px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+@media (max-width: 960px) {
   .menu__navigate {
     display: none;
   }
@@ -250,6 +275,7 @@ body {
     font-weight: 900;
     padding: 0px 10px;
     width: 0;
+    opacity: 0;
   }
 
   .animate--show {
@@ -271,6 +297,7 @@ body {
 
   .animate--show input {
     width: 100%;
+    opacity: 1;
   }
 
   .menu {
@@ -322,5 +349,9 @@ body {
       top: 0%;
       left: 80%;
     }
+  }
+
+  .about__mainly {
+    background-size: cover;
   }
 }
