@@ -2,15 +2,53 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-
 body {
-  background-image: url("imagens/tela-01.png");
+  background-image: url("../img/ceu.jpg");
 }
 
 .status,
 .species,
 .sort,
 .gender {
+  display: none;
+}
+
+.mainly__header {
+  background-image: url("../img/ceu.jpg");
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.menu__mainly {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__navigate {
+  display: flex;
+}
+
+.menu__navigate li {
+  font-size: 25px;
+  padding: 25px;
+}
+
+.menu__navigate li a {
+  color: #fff;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+.menu__navigate li a:hover {
+  color: #a0d03f;
+}
+
+.icon-open {
+  display: none;
+}
+
+.icon-close {
   display: none;
 }
 
@@ -143,7 +181,89 @@ body {
   font-weight: 100;
 }
 
+.about__mainly {
+  background-image: url(../img/buracoper.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about__mainly h1,
+.about__mainly p {
+  color: #fff;
+  background-color: #000;
+  font-weight: 900;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+.about__mainly h1 {
+  width: 100%;
+  font-size: 25px;
+}
+
+.about__mainly p {
+  padding: 0px 20px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
 @media (max-width: 960px) {
+  .menu__navigate {
+    display: none;
+  }
+
+  .menu__navigate li a {
+    color: #fff;
+    font-weight: 900;
+  }
+
+  .icon-open {
+    color: #fff;
+    display: block;
+    font-size: 25px;
+  }
+
+  .icon-close {
+    color: #fff;
+  }
+
+  .menu__nav {
+    padding: 25px 15px;
+  }
+
+  .menu--show {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    width: 30%;
+    background-image: url(../img/ceu.jpg);
+    opacity: 0.8;
+    border-radius: 5px;
+  }
+
+  .menu--show .menu__navigate {
+    display: block;
+  }
+
+  .menu--show .menu__navigate li {
+    font-size: 18px;
+    padding: 10px 5px;
+  }
+
+  .menu--show .icon-open {
+    display: none;
+  }
+
+  .menu--show .icon-close {
+    display: block;
+    padding: 0px 0px 15px 0px;
+  }
+
   .animate {
     width: 0%;
   }
@@ -155,6 +275,7 @@ body {
     font-weight: 900;
     padding: 0px 10px;
     width: 0;
+    opacity: 0;
   }
 
   .animate--show {
@@ -176,6 +297,7 @@ body {
 
   .animate--show input {
     width: 100%;
+    opacity: 1;
   }
 
   .menu {
@@ -227,5 +349,9 @@ body {
       top: 0%;
       left: 80%;
     }
+  }
+
+  .about__mainly {
+    background-size: cover;
   }
 }
