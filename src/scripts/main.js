@@ -148,3 +148,22 @@ function genderStatus(){
   }  
   });
 }
+
+function createTooltips() {
+  const  tooltips = {
+      callbacks: {
+          label: function (tooltipItem, data) {
+              const sum = data.datasets[0].data.reduce((accumulator, currentValue) => {
+                  return accumulator + currentValue;
+              });
+        
+              const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+              const percentage = Number((value / sum) * 100).toFixed(2);
+              const label = `${data.labels[tooltipItem.index]}: ${percentage}%`
+              return label;
+          }
+      }
+  }
+
+  return tooltips;
+}
