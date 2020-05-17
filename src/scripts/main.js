@@ -2,7 +2,7 @@ import { getCharacters } from '../data/rickandmorty.js'
 import { buildHTML } from './createCard.js'
 import { allCharacters, gendersFilter, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter, cardsBox } from './selectors.js'
 import { createFilter, getOptions } from './createFilters.js';
-import { filterExact, filterLike, sortByProp } from './data.js';
+import { filterExact, filterLike, sortByProp, rickByStatus, numberOfGenders, sumRicksMorty } from './data.js';
 
 function buildFilter(data, parentElement, type) {
   const options = getOptions(data, type);
@@ -36,4 +36,42 @@ getCharacters().then(characters => {
   buildHTML(cardsBox, characters);
 });
 
+//curiosidades e grafico
 
+function rickStatusChart(){
+  const ctx = document.getElementById('pie-chart').getContext('2d');
+  const ricks = rickByStatus(data.results)
+  const chartData = {
+      datasets: [{
+          data: [ricks.alive, ricks.dead, ricks.unknown],
+          options: [
+          ],   
+          backgroundColor: ["rgb(157,219,221)","rgb(158, 222, 160)", "rgb(160, 158, 222)"],
+          
+      }],
+  
+      labels: [
+          'Alive',
+          'Dead',
+          'Unknown'
+      ]
+      
+  };
+  
+  const chart = new Chart(ctx, {
+  type: 'pie',
+  data: chartData,
+  options: {
+      legend: {
+          layout: {
+              padding: 10,
+          },
+          labels: {
+              fontColor: "rgba(255, 255, 255)",
+          }
+      
+      },
+      tooltips: createTooltips()
+  }  
+  });
+}
