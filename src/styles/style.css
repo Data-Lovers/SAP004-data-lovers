@@ -355,3 +355,96 @@ body {
     background-size: cover;
   }
 }
+
+.container-ricks, .container-sum, .container-gender {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.rick-chart-container, .mortyjr-chart-container, .sum-chart-container {
+  display: flex;
+  width: 530px;
+  height: 265px;
+}
+
+.container-ricks {
+  background-color:rgba(20, 90, 155, 0.575);
+  color: rgb(159, 204, 247);
+}
+
+.container-gender{
+	background-color:rgba(102, 5, 20, 0.473);
+	color: rgb(250, 131, 149);
+}
+
+.container-sum {
+	background-color:rgba(153, 126, 5, 0.568);
+	color: rgb(243, 237, 146);
+}
+
+.rick-text, .gender-text, .mortys-text {
+	font-size: 18px;
+	font-family: 'Baloo Tamma 2', cursive;
+	width: 400px;
+  }
+
+.txt-img, .img-rick, .img-morty, .img-mortyjr {
+	display: flex;
+	margin: 50px;
+	}
+
+.title-curiosities, h2{
+  display: flex;
+  align-items: center;
+  color: #A0D03F;
+  margin: 30px;
+}
+
+.gender-txt-img, .ricky-txt-img, .morty-txt-img {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/*battle*/
+
+.figures {
+  width: 5%;
+}
+
+.container-battle {
+  margin: 30px;
+}
+
+.battle {
+  display: flex;
+  max-width: 30%;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.battle.selected > img {
+  filter: invert(100%);
+}
+
+.battle-characters {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-battle {
+  font-size: 18px;
+  font-family: 'Baloo Tamma 2', cursive;
+  max-width: 80%;
+  text-align: left;
+  margin: 30px;
+}
+
+.character-score {
+	font-size: 150px;
+}
