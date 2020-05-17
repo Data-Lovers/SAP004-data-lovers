@@ -77,3 +77,14 @@ export function numberOfGenders (data) {
   }
   return data.reduce(sumGender, initialValue)
 }
+
+//battle
+export function getNumberOfEpisodes (data, characterId) { 
+  const numberCharacterId = parseInt(characterId, 10)
+
+  const selectedCharacter = data.find( (character) => {
+    return character.id === numberCharacterId;
+  })
+  const totalEpisodes = selectedCharacter.episode.length;
+  return totalEpisodes;
+}
