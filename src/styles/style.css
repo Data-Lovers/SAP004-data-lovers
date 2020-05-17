@@ -356,6 +356,34 @@ body {
   }
 }
 
+.back {
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(160, 208, 63, 0.274);
+	margin: 40px;
+	border-radius: 10px;
+}
+
+h1, h2 {
+	font-family: 'Baloo Tamma 2', bold, cursive;
+	font-size: 20px;
+	align-items: center;
+}
+
+.img-abst {
+	display: flex;
+	
+}
+
+.txt-abs {
+	text-align: left;
+	color: rgb(255, 255, 255);
+	font-size: 18px;
+	width: 800px;
+	margin: 10px;
+}
+
+
 .container-ricks, .container-sum, .container-gender {
   display:flex;
   align-items: center;
