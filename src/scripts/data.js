@@ -55,3 +55,25 @@ export function rickByStatus (data) {
   }
   return data.reduce(groupRicks, initialValue)
 }
+
+export function numberOfGenders (data) {
+  const initialValue ={
+    female: 0,
+    male: 0,
+    unknown:0,
+    genderless: 0,
+  }
+  function sumGender (accumulator, current){
+    if (current.gender === 'Female'){
+      accumulator.female += 1;
+    } else if(current.gender === 'Male'){
+      accumulator.male +=1;
+    } else if(current.gender === 'unknown'){
+      accumulator.unknown += 1;
+    } else if(current.gender === "Genderless"){
+      accumulator.genderless += 1;
+    }
+    return accumulator;
+  }
+  return data.reduce(sumGender, initialValue)
+}
