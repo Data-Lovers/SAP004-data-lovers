@@ -110,3 +110,41 @@ function sumRicksMortysChart() {
   }  
   });
 }
+
+function genderStatus(){
+  const ctx = document.getElementById('chart-pie').getContext('2d');
+  const gender = numberOfGenders(data.results)
+  const chartDataGender = {
+      datasets: [{
+          data: [gender.female, gender.male, gender.unknown, gender.genderless],
+          options: [
+          ],   
+          backgroundColor: ["rgb(232,69,168)","rgb(33,158,184)", "rgb(245,247,118)","rgb(242,83,82)"],
+          
+      }],
+  
+      labels: [
+          'Female',
+          'Male',
+          'Unknown',
+          'Gendeless'
+      ],
+  };
+
+  
+  const chart = new Chart(ctx, {
+  type: 'pie',
+  data: chartDataGender,
+  options: {
+      legend: {
+          layout: {
+              padding: 10,
+          },
+          labels: {
+              fontColor: "rgba(255, 255, 255)",
+          }
+      },
+      tooltips: createTooltips()
+  }  
+  });
+}
