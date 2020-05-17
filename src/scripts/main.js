@@ -36,13 +36,17 @@ getCharacters().then(characters => {
   buildFilter(characters, statusFilter, 'status');
 
   buildHTML(cardsBox, characters);
+
+  rickStatusChart(characters);
+  sumRicksMortysChart(characters)
+  genderStatus(characters)
 });
 
 //curiosidades e grafico
 
-function rickStatusChart(){
+function rickStatusChart(data){
   const ctx = document.getElementById('pie-chart').getContext('2d');
-  const ricks = rickByStatus(data.results)
+  const ricks = rickByStatus(data)
   const chartData = {
       datasets: [{
           data: [ricks.alive, ricks.dead, ricks.unknown],
@@ -78,11 +82,11 @@ function rickStatusChart(){
   });
 }
 
-function sumRicksMortysChart() {
+function sumRicksMortysChart(data) {
   //pega todos os elementos que possuem a classe line-chart
   const ctx = document.getElementById('sum-pie').getContext('2d');
   //estatisticas dos ricks
-  const person = sumRicksMorty (data.results)
+  const person = sumRicksMorty (data)
   const chartData = {
       datasets: [{
           data: [person.rick, person.morty],   
@@ -113,9 +117,9 @@ function sumRicksMortysChart() {
   });
 }
 
-function genderStatus(){
+function genderStatus(data){
   const ctx = document.getElementById('chart-pie').getContext('2d');
-  const gender = numberOfGenders(data.results)
+  const gender = numberOfGenders(data)
   const chartDataGender = {
       datasets: [{
           data: [gender.female, gender.male, gender.unknown, gender.genderless],
@@ -171,6 +175,3 @@ function createTooltips() {
 }
 
 renderBattle(battleCharacters)
-rickStatusChart()
-genderStatus()
-sumRicksMortysChart()
