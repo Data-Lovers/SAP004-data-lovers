@@ -15,3 +15,21 @@ export function sortByProp(characters, prop, upOrDown) {
     return compare ? 1 : -1;
   })
 }
+
+export function sumRicksMorty (data) {
+  const initialValue = {
+    rick: 0,
+    morty: 0,
+  }
+
+  function groupRicksMorys  (accumulator, current){ 
+    if (current.name.includes('Rick')){
+      accumulator.rick += 1;
+    } else if (current.name.includes('Morty')){
+      accumulator.morty += 1;
+    }
+    return accumulator;
+  }
+  
+  return data.reduce(groupRicksMorys , initialValue)
+}
