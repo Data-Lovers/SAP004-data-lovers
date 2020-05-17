@@ -75,3 +75,38 @@ function rickStatusChart(){
   }  
   });
 }
+
+function sumRicksMortysChart() {
+  //pega todos os elementos que possuem a classe line-chart
+  const ctx = document.getElementById('sum-pie').getContext('2d');
+  //estatisticas dos ricks
+  const person = sumRicksMorty (data.results)
+  const chartData = {
+      datasets: [{
+          data: [person.rick, person.morty],   
+          backgroundColor: ["rgb(157,219,221)","rgb(158, 222, 160)"],
+      }],
+  
+      labels: [
+          'Rick',
+          'Morty',
+          
+      ],
+  };
+
+  const chart = new Chart(ctx, {
+  type: 'pie',
+  data: chartData,
+  options: {
+      legend: {
+          layout: {
+              padding: 10,
+          },
+          labels: {
+              fontColor: "rgba(255, 255, 255)",
+          }
+      },
+      tooltips: createTooltips()
+  }  
+  });
+}
