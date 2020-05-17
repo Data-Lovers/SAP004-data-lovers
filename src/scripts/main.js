@@ -2,6 +2,8 @@ import { getCharacters } from '../data/rickandmorty.js'
 import { buildHTML } from './createCard.js'
 import { allCharacters, gendersFilter, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter, cardsBox } from './selectors.js'
 import { createFilter, getOptions } from './createFilters.js';
+import {renderBattle} from './battle.js';
+import battleCharacters from '../data/battle.js'
 import { filterExact, filterLike, sortByProp, rickByStatus, numberOfGenders, sumRicksMorty } from './data.js';
 
 function buildFilter(data, parentElement, type) {
