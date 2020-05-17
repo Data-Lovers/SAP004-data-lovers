@@ -167,3 +167,8 @@ function createTooltips() {
 
   return tooltips;
 }
+
+renderBattle(battleCharacters)
+rickStatusChart()
+genderStatus()
+sumRicksMortysChart()
