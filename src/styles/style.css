@@ -462,7 +462,8 @@ h1, h2 {
 .battle-characters {
   margin: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .text-battle {
@@ -474,5 +475,12 @@ h1, h2 {
 }
 
 .character-score {
-	font-size: 150px;
+  font-size: 150px;
+  font-family: 'Squada One', cursive;
+  color: #A0D03F;
+}
+
+.battle-vs {
+  height: 10%;
+  width: 10%;
 }
