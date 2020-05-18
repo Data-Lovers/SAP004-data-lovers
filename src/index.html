@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
@@ -61,8 +62,74 @@
       <ul id="cards-box" class="cards__box"></ul>
     </main>
 
+    <section id="abstract" class="page back">
+      <div>
+        <img alt="abstract-img" src="img/img-sobre.png" class="img-abst">
+      </div>
+      <div>
+        <h1>SOBRE</h1>
+        <p class="txt-abs">Rick and Morty é uma série de animação adulta norte-americana de comédia e ficção científica criada por Justin Roiland e Dan Harmon para o bloco de programação noturno Adult Swim, exibido no canal Cartoon Network. A série estreou em 2 de Dezembro de 2013 e acompanha as perigosas aventuras do cientista alcoólatra Rick e seu neto Morty, que divide seu tempo entre a vida familiar e viagens interdimensionais. A série se originou de uma paródia animada em curta-metragem do filme De Volta Para o Futuro criada por Roiland para o festival de cinema Channel 101. A Adult Swim abordou Harmon a respeito de ideias para um programa de televisão, então ele e Roiland desenvolveram o programa com base no curta, substituindo os personagens de Doc com Rick e Marty com Morty. O show gira em torno das aventuras dos membros da família Smith, que consiste nos pais Jerry e Beth, seus filhos Summer e Morty, e o pai de Beth, chamado Rick Sanchez, que mora com eles como hóspede.</p>
+      </div>
+    </section>
+
+    <section id="curiosities" class="page">
+      <div>
+      <div class="title-curiosities">
+        <img alt="morty" src="img/morty.png" class="figures">
+        <h1>VOCÊ SABIA?</h1>
+        <img alt="rick" src="img/rick.png" class="figures">
+      </div>
+
+      <div class="container-ricks">
+        <div class="rick-chart-container">
+          <canvas id="pie-chart" class="chartjs"></canvas>
+        </div>
+        <div class="ricky-txt-img">
+          <img  alt="img-statistic" src="img/img-rick.png" class="img-rick"/>
+          <p class="rick-text">O gráfico mostra o estado dos Ricks em diferentes universos.<br>No episódio "Rick Potion No. 9" (S1E6). As tentativas de Morty de fazer Jessica apaixonar-se por ele não funcionam, resultando em um final chocante em que Rick e seu neto precisam abandonar sua dimensão infestada para sempre.</p> 
+        </div>
+      </div>
+
+      <div class="container-sum">
+        <div class="sum-chart-container">
+          <canvas id="sum-pie" class="chartjs"></canvas>
+        </div>
+        <div class="morty-txt-img">
+          <img  alt="img-statistic" src="img/mortygrafico.png" class="img-morty"/>
+          <p class="mortys-text">O gráfico ao lado mostra a quantidade de Ricks e Mortys existentes.<br>Em " Contos da Cidadela ", Evil Morty retorna como o principal antagonista do episódio, vencendo a eleição democrática realizada pela Cidadela. Depois de ser eleito, ele passa a assassinar todos os Rick no conselho sombra que manifestaram sua oposição a ele, tornando-se o ditador efetivo da Cidadela. </p>
+        </div>
+      </div>
+
+      <div class="container-gender">
+        <div class="mortyjr-chart-container">
+          <canvas id="chart-pie" class="chartjs"></canvas>
+        </div>
+      <div class="gender-txt-img">
+        <img  alt="img-statistic" src="img/morty-jr.png" class="img-mortyjr"/>
+      <p class="gender-text">O gráfico nos mostra quantidade de indivíduos existentes separados por gênero.<br>Gazorpazorp é um planeta na galáxia de Andrômeda. Como resultado de conflitos, os dois sexos se dividiram. Enquanto as fêmeas floresciam e avançavam, criando robôs mãe, os machos se tornaram primitivos. </p>
+      </div>
+    </div>
+
+    <section class="container-battle">
+      <div>
+        <h2>BATALHA DE EPISÓDIOS</h2>
+        <p class="text-battle">Colocamos nossos personagens para lutar uns contra os outros para sabermos quem aparece em mais episódios. Para isso você deve escolher um personagem da coluna a esquerda e um da coluna a direita, e mostrara quem participa de mais episódios. Let's go!</p>
+      </div>
+      <div class="battle-characters">
+        <div id="battleCharacters1" class="battle"></div>
+        <span id="characterScore1" class="character-score">?</span>
+        <img alt="versus" class="battle-vs" src="img/vs.png"/>
+        <span id="characterScore2" class="character-score">?</span>
+        <div id="battleCharacters2" class="battle"></div>
+      </div>
+    </section>
+    </section>
+
+ <!-- <main>
+    <ul id="cards-list" class="cards-list"></ul>
+  </main> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="scripts/main.js" type="module"></script>
     <script src="scripts/style-menu.js" type="module"></script>
   </body>
-
 </html>
