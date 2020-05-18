@@ -14,7 +14,7 @@ describe('getOptions', () => {
 });
 
 describe('createFilter', () => {
-  it('Man clicked, add li on ul, check if the elements are right', () => {
+  it('When clicked, add li on ul, check if the elements are right', () => {
     const ul = document.createElement('ul');
     const options = ['Man', 'Girl', 'Alien'];
     const callback = (option) => {
