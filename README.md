@@ -4,10 +4,10 @@
 
 * [1. Sobre](#1-sobre)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. História do usuário](#3-história-do-usuario)
+* [3. História do usuário](#3-história-do-usuário)
 * [4. Protótipo](#4-protótipo)
-* [5. Pesquisa](#pesquisa)
-* [6. Guia técnico](#6-guia-tecnico)
+* [5. Pesquisa](#5-pesquisa)
+* [6. Guia técnico](#6-guia-técnico)
 
 ***
 
