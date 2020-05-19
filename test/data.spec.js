@@ -1,4 +1,4 @@
-import { filterExact, filterLike, sortByProp, sumRicksMorty, numberOfGenders, rickByStatus } from '../src/scripts/data.js';
+import { filterExact, filterLike, sortByProp, sumRicksMorty, numberOfGenders, rickByStatus, getNumberOfEpisodes } from '../src/scripts/data.js';
 
 import { expect } from 'chai';
 
@@ -51,7 +51,6 @@ describe ('sumRicksMorty', () => {
     expect(result.rick).to.equal(3);
     expect(result.morty).to.equal(1);
   })
-
 })
 
 describe ('numberOfGenders', () => {
@@ -78,7 +77,6 @@ describe ('numberOfGenders', () => {
     expect(result.female).to.equal(1);
     expect(result.unknown).to.equal(1);
   })
-
 })
 
 describe ('rickByStatus', () => {
@@ -110,5 +108,27 @@ describe ('rickByStatus', () => {
     expect(result.unknown).to.equal(1);
   })
 })
+
+describe ('getNumberOfEpisodes', () => {
+  it('is a function', () => {
+    expect(typeof getNumberOfEpisodes).to.equal('function')
+  })
+  it('deve somar os episodios dos personagens', () => {
+    const dataEpisodes = [
+      {
+        id:1,
+        "episode": [
+          "https://rickandmortyapi.com/api/episode/1",
+          "https://rickandmortyapi.com/api/episode/2",
+          "https://rickandmortyapi.com/api/episode/3",
+        ]
+      },
+    ]
+    const result = getNumberOfEpisodes(dataEpisodes, 1);
+    expect(result).to.equal(3);
+  })
+})
+
+
 
 
