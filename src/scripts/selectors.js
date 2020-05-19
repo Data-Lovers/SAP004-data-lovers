@@ -1,20 +1,58 @@
-const allCharacters = document.querySelector('#allCharacters');
-const statusFilter = document.querySelector('#statusFilter');
-const cardsBox = document.querySelector('#cards-box');
-const gendersFilter = document.querySelector('#gendersFilter');
-const search = document.querySelector('#search');
-const speciesFilter = document.querySelector('#speciesFilter');
-const sortByNameUp = document.querySelector('#sortByNameUp');
-const sortByNameDown = document.querySelector('#sortByNameDown');
+const qs = (selector) => document.querySelector(selector);
 
-const searchFilter = document.querySelector('#search-filter');
-const searchIcon = document.querySelector('#search-icon');
-const searchNave = document.querySelector('#search-nave');
+const allCharacters = qs('#allCharacters');
+const cardsBox = qs('#cards-box');
+const gendersFilter = qs('#gendersFilter');
+const search = qs('#search');
+const sortByNameUp = qs('#sortByNameUp');
+const sortByNameDown = qs('#sortByNameDown');
+const speciesFilter = qs('#speciesFilter');
+const statusFilter = qs('#statusFilter');
 
-const menuOpen = document.querySelector('#menu-open');
-const menuClose = document.querySelector('#menu-close');
-const menuNav = document.querySelector('#menu-nav');
+const searchFilter = qs('#search-filter');
+const searchIcon = qs('#search-icon');
+const searchNave = qs('#search-nave');
+
+const menuClose = qs('#menu-close');
+const menuNav = qs('#menu-nav');
+const menuOpen = qs('#menu-open');
+
+const mainAbout = qs('#mainly-about');
+const mainCards = qs('#mainly-cards');
+const mainCuriosities = qs('#mainly-curiosities');
+
+const about = qs('#about');
+const home = qs('#home');
+const curiosities = qs('#curiosities');
+const menuFilter = qs('#menu-filter');
+
+const battleOne = qs('#characterScoreOne');
+const battleTwo = qs('#characterScoreTwo');
 
 
 
-export { allCharacters, cardsBox, gendersFilter, menuOpen, menuClose, menuNav, searchIcon, searchFilter, searchNave, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter };
+export {
+  about,
+  allCharacters,
+  battleOne,
+  battleTwo,
+  cardsBox,
+  curiosities,
+  gendersFilter,
+  home,
+  mainAbout,
+  mainCards,
+  menuClose,
+  mainCuriosities,
+  menuFilter,
+  menuNav,
+  menuOpen,
+  search,
+  searchFilter,
+  searchIcon,
+  searchNave,
+  statusFilter,
+  speciesFilter,
+  sortByNameUp,
+  sortByNameDown
+};
