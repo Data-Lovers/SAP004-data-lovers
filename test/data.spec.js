@@ -30,7 +30,7 @@ describe('sort', () => {
 
 describe ('sumRicksMorty', () => {
   it('is a function', () => {
-    expect(typeof sumRicksMorty).toBe('function')
+    expect(typeof sumRicksMorty).to.equal('function')
   })
   it('deve somar os ricks e os mortys', () => {
     const dataRickMortys = [
@@ -48,10 +48,12 @@ describe ('sumRicksMorty', () => {
       }
     ]
     const result = sumRicksMorty(dataRickMortys);
-    expect(result.rick).toBe(3);
-    expect(result.morty).toBe(1);
+    expect(result.rick).to.equal(3);
+    expect(result.morty).to.equal(1);
   })
 
 })
+
+
 
 
