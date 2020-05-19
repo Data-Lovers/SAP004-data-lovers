@@ -1,4 +1,4 @@
-import { filterExact, filterLike, sortByProp, sumRicksMorty } from '../src/scripts/data.js';
+import { filterExact, filterLike, sortByProp, sumRicksMorty, numberOfGenders } from '../src/scripts/data.js';
 
 import { expect } from 'chai';
 
@@ -54,6 +54,31 @@ describe ('sumRicksMorty', () => {
 
 })
 
+describe ('numberOfGenders', () => {
+  it ('is a function', () => {
+    expect(typeof numberOfGenders).to.equal('function')
+  })
+  it('deve somar por genero', ()=>{
+    const dataGender =[
+      {
+        gender: 'Male',
+      },
+      {
+        gender: 'Male',
+      },
+      {
+        gender: 'Female',
+      },
+      {
+        gender: 'unknown',
+      },
+    ]
+    const result = numberOfGenders(dataGender);
+    expect(result.male).to.equal(2);
+    expect(result.female).to.equal(1);
+    expect(result.unknown).to.equal(1);
+  })
 
+})
 
 
