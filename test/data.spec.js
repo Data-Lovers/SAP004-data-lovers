@@ -71,11 +71,15 @@ describe ('numberOfGenders', () => {
       {
         gender: 'unknown',
       },
+      {
+        gender: 'Genderless',
+      },
     ]
     const result = numberOfGenders(dataGender);
     expect(result.male).to.equal(2);
     expect(result.female).to.equal(1);
     expect(result.unknown).to.equal(1);
+    expect(result.genderless).to.equal(1);
   })
 })
 
