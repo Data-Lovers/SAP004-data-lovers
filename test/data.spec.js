@@ -1,4 +1,4 @@
-import { filterExact, filterLike, sortByProp } from '../src/scripts/data.js';
+import { filterExact, filterLike, sortByProp, sumRicksMorty } from '../src/scripts/data.js';
 
 import { expect } from 'chai';
 
@@ -27,5 +27,31 @@ describe('sort', () => {
     expect(sortByProp(character, 'name', true)).to.deep.equal([{"name": "Morty"}, {"name": "Rick"}]);
   });
 });
+
+describe ('sumRicksMorty', () => {
+  it('is a function', () => {
+    expect(typeof sumRicksMorty).toBe('function')
+  })
+  it('deve somar os ricks e os mortys', () => {
+    const dataRickMortys = [
+      {
+        name:'Rick Sanches',
+      },
+      {
+        name: 'Rick Oitavo'
+      },
+      {
+        name: 'Chico Rick',
+      },
+      {
+        name: 'Morty',
+      }
+    ]
+    const result = sumRicksMorty(dataRickMortys);
+    expect(result.rick).toBe(3);
+    expect(result.morty).toBe(1);
+  })
+
+})
 
 
