@@ -1,3 +1,4 @@
+/*global Chart*/
 import { getCharacters } from '../data/rickandmorty.js'
 import { buildHTML } from './createCard.js'
 import { allCharacters, gendersFilter, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter, cardsBox } from './selectors.js'
@@ -42,8 +43,6 @@ getCharacters().then(characters => {
   genderStatus(characters)
 });
 
-//curiosidades e grafico
-
 function rickStatusChart(data) {
   const ctx = document.getElementById('pie-chart').getContext('2d');
   const ricks = rickByStatus(data)
@@ -80,6 +79,7 @@ function rickStatusChart(data) {
       tooltips: createTooltips()
     }
   });
+  return chart;
 }
 
 function sumRicksMortysChart(data) {
@@ -114,6 +114,7 @@ function sumRicksMortysChart(data) {
       tooltips: createTooltips()
     }
   });
+  return chart;
 }
 
 function genderStatus(data) {
@@ -154,6 +155,7 @@ function genderStatus(data) {
       tooltips: createTooltips()
     }
   });
+  return chart;
 }
 
 function createTooltips() {
