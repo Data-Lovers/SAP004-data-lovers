@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -21,13 +21,13 @@
           <i id="menu-open" class="icon-menu icon-open"></i>
           <ul id="menu-navigate" class="menu__navigate">
             <i id="menu-close" class="icon-cross icon-close"></i>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="">Curiosidades</a></li>
+            <li><a id="home" href="">Home</a></li>
+            <li><a id="about" href="">About</a></li>
+            <li><a id="curiosities" href="">Curiosities</a></li>
           </ul>
         </nav>
       </section>
-      <section class="menu">
+      <section id="menu-filter" class="menu">
         <ul class="menu__items">
           <li id="search-filter" class="filter__search animate">
             <i id="search-icon" class="icon-search"></i>
@@ -58,78 +58,112 @@
       </section>
     </header>
 
-    <main>
+    <main id="mainly-cards" class="active">
       <ul id="cards-box" class="cards__box"></ul>
     </main>
 
-    <section id="abstract" class="page back">
-      <div>
-        <img alt="abstract-img" src="img/img-sobre.png" class="img-abst">
-      </div>
-      <div>
-        <h1>SOBRE</h1>
-        <p class="txt-abs">Rick and Morty é uma série de animação adulta norte-americana de comédia e ficção científica criada por Justin Roiland e Dan Harmon para o bloco de programação noturno Adult Swim, exibido no canal Cartoon Network. A série estreou em 2 de Dezembro de 2013 e acompanha as perigosas aventuras do cientista alcoólatra Rick e seu neto Morty, que divide seu tempo entre a vida familiar e viagens interdimensionais. A série se originou de uma paródia animada em curta-metragem do filme De Volta Para o Futuro criada por Roiland para o festival de cinema Channel 101. A Adult Swim abordou Harmon a respeito de ideias para um programa de televisão, então ele e Roiland desenvolveram o programa com base no curta, substituindo os personagens de Doc com Rick e Marty com Morty. O show gira em torno das aventuras dos membros da família Smith, que consiste nos pais Jerry e Beth, seus filhos Summer e Morty, e o pai de Beth, chamado Rick Sanchez, que mora com eles como hóspede.</p>
-      </div>
-    </section>
+    <main id="mainly-about" class="disable mainly__about">
+      <section>
+        <img alt="image Rick and Morty" src="img/img-sobre.png" class="about__img">
+      </section>
+      <section class="abstract">
+        <h1 class="title">
+          ABOUT
+        </h1>
+        <p class="about__abstract">
+          Rick and Morty is a series of American adult animated comedy and science fiction created<br>
+          Filmography by Justin Roiland and Dan Harmon for the Adult Swim evening block, shown on channel <br>
+          Cartoon Network. The series debuted on December 2, 2013 and follows the scientist's dangerous <br>
+          adventures alcoholic Rick and his grandson Morty, who divides his time between family life and <br>
+          interdimensional travel. The series originated from an animated parody in the short film Back to<br>
+          the Future created by Roiland for Channel 101 film festival. Adult Swim approached Harmon about <br>
+          ideas for a television program, so he and Roiland developed the program based on the short, replacing<br>
+          the Doc characters with Rick and Marty with Morty. The show revolves around the adventures of family<br>
+          members Smith, which consists of parents Jerry and Beth, their children Summer and Morty, and Beth's<br>
+          father, named Rick Sanchez, who lives with them as a guest.
+        </p>
+      </section>
+    </main>
 
-    <section id="curiosities" class="page">
-      <div>
-      <div class="title-curiosities">
+    <main id="mainly-curiosities" class="mainly__curiosities disable">
+      <section class="curiosities">
         <img alt="morty" src="img/morty.png" class="figures">
-        <h1>VOCÊ SABIA?</h1>
+        <h1 class="curiosities__title">
+          Did you know?
+        </h1>
         <img alt="rick" src="img/rick.png" class="figures">
-      </div>
+      </section>
 
-      <div class="container-ricks">
-        <div class="rick-chart-container">
+      <section class="container-ricks container__metrics">
+        <section class="rick-chart-container chart__container">
           <canvas id="pie-chart" class="chartjs"></canvas>
-        </div>
-        <div class="ricky-txt-img">
-          <img  alt="img-statistic" src="img/img-rick.png" class="img-rick"/>
-          <p class="rick-text">O gráfico mostra o estado dos Ricks em diferentes universos.<br>No episódio "Rick Potion No. 9" (S1E6). As tentativas de Morty de fazer Jessica apaixonar-se por ele não funcionam, resultando em um final chocante em que Rick e seu neto precisam abandonar sua dimensão infestada para sempre.</p> 
-        </div>
-      </div>
+        </section>
+        <section class="ricky-txt-img youknow__box">
+          <img alt="img-statistic" src="img/img-rick.png" class="img-rick" />
+          <p class="rick-text youknow__text">
+            The graph shows the state of the Ricks in different universes. <br>
+            In the episode "Rick Potion No. 9" (S1E6). Morty's attempts to make Jessica fall in love with him don't
+            work,resulting in a shocking ending in which Rick and his grandson must abandon their infested dimension
+            forever.
+          </p>
+        </section>
+      </section>
 
-      <div class="container-sum">
-        <div class="sum-chart-container">
+      <section class="container-sum container__metrics">
+        <section class="sum-chart-container chart__container">
           <canvas id="sum-pie" class="chartjs"></canvas>
-        </div>
-        <div class="morty-txt-img">
-          <img  alt="img-statistic" src="img/mortygrafico.png" class="img-morty"/>
-          <p class="mortys-text">O gráfico ao lado mostra a quantidade de Ricks e Mortys existentes.<br>Em " Contos da Cidadela ", Evil Morty retorna como o principal antagonista do episódio, vencendo a eleição democrática realizada pela Cidadela. Depois de ser eleito, ele passa a assassinar todos os Rick no conselho sombra que manifestaram sua oposição a ele, tornando-se o ditador efetivo da Cidadela. </p>
-        </div>
-      </div>
+        </section>
+        <section class="morty-txt-img youknow__box">
+          <img alt="img-statistic" src="img/mortygrafico.png" class="img-morty" />
+          <p class="mortys-text youknow__text">
+            The graph on the side shows the number of existing Ricks and Mortys. <br>
+            In "Tales from the Citadel", Evil Morty returns as the main antagonist of the episode, winning the
+            democratic election held by the Citadel. After being elected, he proceeds to murder all Rick in the shadow
+            council who expressed their opposition to him, becoming the effective dictator of the Citadel.
+          </p>
+        </section>
+      </section>
 
-      <div class="container-gender">
-        <div class="mortyjr-chart-container">
+      <section class="container-gender container__metrics">
+        <section class="mortyjr-chart-container chart__container">
           <canvas id="chart-pie" class="chartjs"></canvas>
-        </div>
-      <div class="gender-txt-img">
-        <img  alt="img-statistic" src="img/morty-jr.png" class="img-mortyjr"/>
-      <p class="gender-text">O gráfico nos mostra quantidade de indivíduos existentes separados por gênero.<br>Gazorpazorp é um planeta na galáxia de Andrômeda. Como resultado de conflitos, os dois sexos se dividiram. Enquanto as fêmeas floresciam e avançavam, criando robôs mãe, os machos se tornaram primitivos. </p>
-      </div>
-    </div>
+        </section>
+        <section class="gender-txt-img youknow__box">
+          <img alt="img-statistic" src="img/morty-jr.png" class="img-mortyjr" />
+          <p class="gender-text youknow__text">
+            The graph shows us the number of existing individuals separated by gender. <br>
+            Gazorpazorp is a planet in the Andromeda galaxy. As a result of conflict, the two sexes were divided. As
+            females flourished and advanced, creating mother robots, males became primitive.
+          </p>
+        </section>
+      </section>
 
-    <section class="container-battle">
-      <div>
-        <h2>BATALHA DE EPISÓDIOS</h2>
-        <p class="text-battle">Colocamos nossos personagens para lutar uns contra os outros para sabermos quem aparece em mais episódios. Para isso você deve escolher um personagem da coluna a esquerda e um da coluna a direita, e mostrara quem participa de mais episódios. Let's go!</p>
-      </div>
-      <div class="battle-characters">
-        <div id="battleCharacters1" class="battle"></div>
-        <span id="characterScore1" class="character-score">?</span>
-        <img alt="versus" class="battle-vs" src="img/vs.png"/>
-        <span id="characterScore2" class="character-score">?</span>
-        <div id="battleCharacters2" class="battle"></div>
-      </div>
-    </section>
-    </section>
+      <section class="container-battle">
+        <section>
+          <h2 class="curiosities__batle">
+            EPISODES BATTLE
+          </h2>
+          <p class="text-battle">
+            We put our characters to fight each other to know who appears in more episodes. For this you must choose a
+            character from the left column and one from the right column, and show who participates in the most
+            episodes. Let's go!
+          </p>
+        </section>
+        <section class="battle-characters">
+          <ul id="battleCharactersOne" class="battle"></ul>
+          <section class="versus">
+            <p id="characterScoreOne" class="character-score">?</p>
+            <img alt="versus" class="battle-vs" src="img/vs.png" />
+            <p id="characterScoreTwo" class="character-score">?</p>
+          </section>
+          <ul id="battleCharactersTwo" class="battle"></ul>
+        </section>
+      </section>
+    </main>
 
- <!-- <main>
-    <ul id="cards-list" class="cards-list"></ul>
-  </main> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="scripts/main.js" type="module"></script>
-    <script src="scripts/style-menu.js" type="module"></script>
+    <script src="scripts/events-menu.js" type="module"></script>
   </body>
+
 </html>
