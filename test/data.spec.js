@@ -1,4 +1,4 @@
-import { filterExact, filterLike, sortByProp, sumRicksMorty, numberOfGenders } from '../src/scripts/data.js';
+import { filterExact, filterLike, sortByProp, sumRicksMorty, numberOfGenders, rickByStatus } from '../src/scripts/data.js';
 
 import { expect } from 'chai';
 
@@ -79,6 +79,36 @@ describe ('numberOfGenders', () => {
     expect(result.unknown).to.equal(1);
   })
 
+})
+
+describe ('rickByStatus', () => {
+  it('is a function', () => {
+    expect(typeof rickByStatus).to.equal('function')
+  })
+  it('deve contar os ricks por status', () => {
+    const dataStatus = [
+      {
+        name:'Rick Sanches',
+        status: 'Alive',
+      },
+      {
+        name: 'Rick Oitavo',
+        status: 'Dead',
+      },
+      {
+        name: 'Chico Rick',
+        status: 'unknown'
+      },
+      {
+        name: 'Morty',
+        status: 'Alive',
+      }
+    ]
+    const result = rickByStatus(dataStatus);
+    expect(result.alive).to.equal(1);
+    expect(result.dead).to.equal(1);
+    expect(result.unknown).to.equal(1);
+  })
 })
 
 
