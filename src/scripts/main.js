@@ -2,7 +2,7 @@ import { getCharacters } from '../data/rickandmorty.js'
 import { buildHTML } from './createCard.js'
 import { allCharacters, gendersFilter, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter, cardsBox } from './selectors.js'
 import { createFilter, getOptions } from './createFilters.js';
-import {renderBattle} from './battle.js';
+import { renderBattle } from './battle.js';
 import battleCharacters from '../data/battle.js'
 import { filterExact, filterLike, sortByProp, rickByStatus, numberOfGenders, sumRicksMorty } from './data.js';
 
@@ -44,131 +44,132 @@ getCharacters().then(characters => {
 
 //curiosidades e grafico
 
-function rickStatusChart(data){
+function rickStatusChart(data) {
   const ctx = document.getElementById('pie-chart').getContext('2d');
   const ricks = rickByStatus(data)
   const chartData = {
-      datasets: [{
-          data: [ricks.alive, ricks.dead, ricks.unknown],
-          options: [
-          ],   
-          backgroundColor: ["rgb(157,219,221)","rgb(158, 222, 160)", "rgb(160, 158, 222)"],
-          
-      }],
-  
-      labels: [
-          'Alive',
-          'Dead',
-          'Unknown'
-      ]
-      
+    datasets: [{
+      data: [ricks.alive, ricks.dead, ricks.unknown],
+      options: [
+      ],
+      backgroundColor: ["rgb(157,219,221)", "rgb(158, 222, 160)", "rgb(160, 158, 222)"],
+
+    }],
+
+    labels: [
+      'Alive',
+      'Dead',
+      'Unknown'
+    ]
+
   };
-  
+
   const chart = new Chart(ctx, {
-  type: 'pie',
-  data: chartData,
-  options: {
+    type: 'pie',
+    data: chartData,
+    options: {
       legend: {
-          layout: {
-              padding: 10,
-          },
-          labels: {
-              fontColor: "rgba(255, 255, 255)",
-          }
-      
+        layout: {
+          padding: 10,
+        },
+        labels: {
+          fontColor: "rgba(255, 255, 255)",
+        }
+
       },
       tooltips: createTooltips()
-  }  
+    }
   });
 }
 
 function sumRicksMortysChart(data) {
-  //pega todos os elementos que possuem a classe line-chart
   const ctx = document.getElementById('sum-pie').getContext('2d');
-  //estatisticas dos ricks
-  const person = sumRicksMorty (data)
+  const person = sumRicksMorty(data);
+
   const chartData = {
-      datasets: [{
-          data: [person.rick, person.morty],   
-          backgroundColor: ["rgb(157,219,221)","rgb(158, 222, 160)"],
-      }],
-  
-      labels: [
-          'Rick',
-          'Morty',
-          
-      ],
+    datasets: [{
+      data: [person.rick, person.morty],
+      backgroundColor: ["rgb(157,219,221)", "rgb(158, 222, 160)"],
+    }],
+
+    labels: [
+      'Rick',
+      'Morty',
+
+    ],
   };
 
   const chart = new Chart(ctx, {
-  type: 'pie',
-  data: chartData,
-  options: {
+    type: 'pie',
+    data: chartData,
+    options: {
       legend: {
-          layout: {
-              padding: 10,
-          },
-          labels: {
-              fontColor: "rgba(255, 255, 255)",
-          }
+        layout: {
+          padding: 10,
+        },
+        labels: {
+          fontColor: "rgba(255, 255, 255)",
+        }
       },
       tooltips: createTooltips()
-  }  
+    }
   });
 }
 
-function genderStatus(data){
+function genderStatus(data) {
   const ctx = document.getElementById('chart-pie').getContext('2d');
-  const gender = numberOfGenders(data)
+  const gender = numberOfGenders(data);
+
   const chartDataGender = {
-      datasets: [{
-          data: [gender.female, gender.male, gender.unknown, gender.genderless],
-          options: [
-          ],   
-          backgroundColor: ["rgb(232,69,168)","rgb(33,158,184)", "rgb(245,247,118)","rgb(242,83,82)"],
-          
-      }],
-  
-      labels: [
-          'Female',
-          'Male',
-          'Unknown',
-          'Gendeless'
+    datasets: [{
+      data: [gender.female, gender.male, gender.unknown, gender.genderless],
+      options: [
       ],
+      backgroundColor: ["rgb(232,69,168)", "rgb(33,158,184)", "rgb(245,247,118)", "rgb(242,83,82)"],
+
+    }],
+
+    labels: [
+      'Female',
+      'Male',
+      'Unknown',
+      'Gendeless'
+    ],
   };
 
-  
+
   const chart = new Chart(ctx, {
-  type: 'pie',
-  data: chartDataGender,
-  options: {
+    type: 'pie',
+    data: chartDataGender,
+    options: {
       legend: {
-          layout: {
-              padding: 10,
-          },
-          labels: {
-              fontColor: "rgba(255, 255, 255)",
-          }
+        layout: {
+          padding: 10,
+        },
+        labels: {
+          fontColor: "rgba(255, 255, 255)",
+          display: "table-row",
+        }
       },
       tooltips: createTooltips()
-  }  
+    }
   });
 }
 
 function createTooltips() {
-  const  tooltips = {
-      callbacks: {
-          label: function (tooltipItem, data) {
-              const sum = data.datasets[0].data.reduce((accumulator, currentValue) => {
-                  return accumulator + currentValue;
-              });
-        
-              const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-              const percentage = Number((value / sum) * 100).toFixed(2);
-              const label = `${data.labels[tooltipItem.index]}: ${percentage}%`
-              return label;
-          }
+  const tooltips = {
+    callbacks: {
+      label: function (tooltipItem, data) {
+        const sum = data.datasets[0].data.reduce((accumulator, currentValue) => {
+          return accumulator + currentValue;
+        });
+
+        const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+        const percentage = Number((value / sum) * 100).toFixed(2);
+        const label = `${data.labels[tooltipItem.index]}: ${percentage}%`
+        return label;
       }
+    }
   }
 
   return tooltips;
