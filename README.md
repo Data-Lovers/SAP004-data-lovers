@@ -14,7 +14,7 @@
 ## 1. Sobre
 
 Rick and Morty (em português Rick e Morty) é uma série de animação adulta norte-americana de comédia e ficção científica.
-A série estreou em 2 de dezembro de 2013 e acompanha as perigosas aventuras do cientista alcoólatra Rick e seu neto Morty, que divide seu tempo entre a vida familiar e viagens interdimensionais. 
+A série estreou em 2 de dezembro de 2013 e acompanha as perigosas aventuras do cientista alcoólatra Rick e seu neto Morty, que divide seu tempo entre a vida familiar e viagens interdimensionais.
 
 
 ## 2. Objetivo
@@ -31,8 +31,8 @@ Para completar e implementar ainda mais a persona afim de aproximar ao público-
 
 Público-alvo: Pessoas de 18 a 35 anos, gostam de assistir desenhos, possuem netflix, amazon, gostam de estar atualizados, alguns jogam videogames.
 
-![persona1](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/persona1.png)
-![persona2](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/persona2.png)
+![persona1](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/persona1.jpg)
+![persona2](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/persona2.jpg)
 
 
 ## 5. Pesquisa
@@ -44,24 +44,24 @@ Foram observados problemas estruturais, assim como objetivo da aplicação e o t
 
 #### Primeiro protótipo
 
-![primeiro-prototipo](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/prototipo1.png)
+![primeiro-prototipo](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/prototipo1.jpg)
 
 #### Primeiras métricas da pesquisa
-![grafico-um](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p1-g1.png)
-![grafico-dois](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p1-g2.png)
+![grafico-um](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p1-g1.jpg)
+![grafico-dois](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p1-g2.jpg)
 
 ### 5.2 Versão final
 
 Foi realizada no dia 19 de Maio de 2020 e encerrada no mesmo dia. A amostra levantou uma melhora na usabilidade e disponibilização das informações. O foco da pesquisa foi sobre o Layout e usabilidade.
 
-#### Segundo protótipo 
+#### Segundo protótipo
 
-![segundo-prototipo](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/prototipo2.png)
+![segundo-prototipo](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/prototipo2.jpg)
 
 #### Métricas finais
 
-![grafico-um](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p2-g1.png)
-![grafico-dois](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p2-g2.png)
+![grafico-um](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p2-g1.jpg)
+![grafico-dois](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p2-g2.jpg)
 
 ## 6. Guia técnico
 
