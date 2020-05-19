@@ -31,15 +31,37 @@ Para completar e implementar ainda mais a persona afim de aproximar ao público-
 
 Público-alvo: Pessoas de 18 a 35 anos, gostam de assistir desenhos, possuem netflix, amazon, gostam de estar atualizados, alguns jogam videogames.
 
-[imagem]
-[imagem]
-[imagem]
+![persona1](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/persona1.png)
+![persona2](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/persona2.png)
 
 
 ## 5. Pesquisa
 
-[imagem da primeira]
-[imagem da ultima]
+### 5.1 Primeira pesquisa
+
+Foi realizada no dia 28 de abril de 2020 e encerrada 29 de abril de 2020, a amostra contou com 18 participantes da laboratória e externos. O foco da pesquisa foi sobre layout e um breve teste de usuário, que apontava foco de leitura.
+Foram observados problemas estruturais, assim como objetivo da aplicação e o tema proposto, a fim de solucionar os problemas apresentados, foi criado um layout mais simples, objetivo e contendo uma sessão que apresentaria o tema proposto do projeto.
+
+#### Primeiro protótipo
+
+![primeiro-prototipo](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/prototipo1.png)
+
+#### Primeiras métricas da pesquisa
+![grafico-um](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p1-g1.png)
+![grafico-dois](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p1-g2.png)
+
+### 5.2 Versão final
+
+Foi realizada no dia 19 de Maio de 2020 e encerrada no mesmo dia. A amostra levantou uma melhora na usabilidade e disponibilização das informações. O foco da pesquisa foi sobre o Layout e usabilidade.
+
+#### Segundo protótipo 
+
+![segundo-prototipo](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/prototipo2.png)
+
+#### Métricas finais
+
+![grafico-um](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p2-g1.png)
+![grafico-dois](https://github.com/laboratoria-projects/SAP004-data-lovers/blob/master/images/p2-g2.png)
 
 ## 6. Guia técnico
 
