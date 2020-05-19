@@ -16,73 +16,82 @@ export function sortByProp(characters, prop, upOrDown) {
   })
 }
 
-export function sumRicksMorty (data) {
-  const initialValue = {
+export function sumRicksMorty(data) {
+  const countRicksMortys = {
     rick: 0,
     morty: 0,
   }
 
-  function groupRicksMorys  (accumulator, current){ 
-    if (current.name.includes('Rick')){
+  function groupRicksMorys(accumulator, current) {
+    if (current.name.includes('Rick')) {
       accumulator.rick += 1;
-    } else if (current.name.includes('Morty')){
+    } else if (current.name.includes('Morty')) {
       accumulator.morty += 1;
     }
     return accumulator;
   }
 
-  return data.reduce(groupRicksMorys , initialValue)
+  return data.reduce(groupRicksMorys, countRicksMortys)
 }
 
-export function rickByStatus (data) {
-  const initialValue = { 
-    alive:  0,
-    dead:0,
-    unknown:0
+export function rickByStatus(data) {
+  const countRicks = {
+    alive: 0,
+    dead: 0,
+    unknown: 0
   }
-  function groupRicks (accumulator, current){
-    if(current.name.includes('Rick')){
-      if (current.status === 'Alive') {
-        accumulator.alive += 1;
-      } else if(current.status === 'Dead'){
-        accumulator.dead += 1; 
-      } else if(current.status === 'unknown'){
-        accumulator.unknown += 1;
+  function groupRicks(accumulator, current) {
+    if (current.name.includes('Rick')) {
+      switch (current.status) {
+        case 'Alive':
+          accumulator.alive += 1;
+          break;
+        case 'Dead':
+          accumulator.dead += 1;
+          break;
+        case 'unknown':
+          accumulator.unknown += 1;
+          break;
       }
-
     }
+
     return accumulator;
   }
-  return data.reduce(groupRicks, initialValue)
+  return data.reduce(groupRicks, countRicks)
 }
 
-export function numberOfGenders (data) {
-  const initialValue ={
+export function numberOfGenders(data) {
+  const resultStatus = {
     female: 0,
     male: 0,
-    unknown:0,
+    unknown: 0,
     genderless: 0,
   }
-  function sumGender (accumulator, current){
-    if (current.gender === 'Female'){
-      accumulator.female += 1;
-    } else if(current.gender === 'Male'){
-      accumulator.male +=1;
-    } else if(current.gender === 'unknown'){
-      accumulator.unknown += 1;
-    } else if(current.gender === "Genderless"){
-      accumulator.genderless += 1;
+  function sumGender(accumulator, current) {
+    switch (current.gender) {
+      case 'Female':
+        accumulator.female += 1;
+        break;
+      case 'Male':
+        accumulator.male += 1;
+        break;
+      case 'unknown':
+        accumulator.unknown += 1;
+        break;
+      case 'Genderless':
+        accumulator.genderless += 1;
+        break;
     }
     return accumulator;
   }
-  return data.reduce(sumGender, initialValue)
+  return data.reduce(sumGender, resultStatus)
 }
 
-//battle
-export function getNumberOfEpisodes (data, characterId) { 
+
+export function getNumberOfEpisodes(data, characterId) {
   const numberCharacterId = parseInt(characterId, 10)
 
-  const selectedCharacter = data.find( (character) => {
+  const selectedCharacter = data.find((character) => {
     return character.id === numberCharacterId;
   })
   const totalEpisodes = selectedCharacter.episode.length;
