@@ -1,17 +1,16 @@
-import {getNumberOfEpisodes} from './data.js';
+import { getNumberOfEpisodes } from './data.js';
+import { battleOne, battleTwo } from './selectors.js'
 
-let selectedCharacter1 = null;
-let selectedCharacter2 = null;
-const battleCharacters1 = 'battleCharacters1';
-const battleCharacters2 = 'battleCharacters2';
+let selectedCharacterOne = null;
+let selectedCharacterTwo = null;
+const battleCharactersOne = 'battleCharactersOne';
+const battleCharactersTwo = 'battleCharactersTwo';
 
 function setCharacterScore(parentId, score) {
-    if (parentId === battleCharacters1){
-        const score1 = document.getElementById('characterScore1');
-        score1.innerHTML = score;
+    if (parentId === battleCharactersOne){
+        battleOne.innerHTML = score;
     } else {
-        const score2 = document.getElementById('characterScore2');
-        score2.innerHTML = score;
+        battleTwo.innerHTML = score;
     }
 }
 
@@ -26,19 +25,19 @@ function renderBattleCharacters (battleCharacters, elementId){
     const battleContainer = document.getElementById(elementId);
 
     battleCharacters.forEach((character) => {
-        const divCharacter = document.createElement('div')
-        divCharacter.dataset.id = character.id;
-        divCharacter.classList.add('battle')
-        divCharacter.innerHTML = `<img src="${character.image}" alt="${character.image}" class="battle-image" id="${elementId}-${character.id}">`
-        battleContainer.appendChild(divCharacter)
-        divCharacter.addEventListener('click', (event) => {
-            if (elementId === battleCharacters1){
-                selectedCharacter1 = event.currentTarget.dataset.id;
-                const score = getNumberOfEpisodes(battleCharacters, selectedCharacter1);
+        const listBatle = document.createElement('li')
+        listBatle.dataset.id = character.id;
+        listBatle.classList.add('battle')
+        listBatle.innerHTML = `<img src="${character.image}" alt="${character.image}" class="battle-image" id="${elementId}-${character.id}">`
+        battleContainer.appendChild(listBatle)
+        listBatle.addEventListener('click', (event) => {
+            if (elementId === battleCharactersOne){
+                selectedCharacterOne = event.currentTarget.dataset.id;
+                const score = getNumberOfEpisodes(battleCharacters, selectedCharacterOne);
                 setCharacterScore (elementId, score);
             } else {
-                selectedCharacter2 = event.currentTarget.dataset.id;
-                const score = getNumberOfEpisodes(battleCharacters, selectedCharacter2);
+                selectedCharacterTwo = event.currentTarget.dataset.id;
+                const score = getNumberOfEpisodes(battleCharacters, selectedCharacterTwo);
                 setCharacterScore (elementId, score);
             }
             removeSelectedClass(elementId)
@@ -48,6 +47,6 @@ function renderBattleCharacters (battleCharacters, elementId){
 }
 
 export function renderBattle (battleCharacters){
-    renderBattleCharacters(battleCharacters, battleCharacters1);
-    renderBattleCharacters(battleCharacters, battleCharacters2);
+    renderBattleCharacters(battleCharacters, battleCharactersOne);
+    renderBattleCharacters(battleCharacters, battleCharactersTwo);
 }
