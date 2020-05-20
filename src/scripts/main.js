@@ -1,4 +1,4 @@
-/*global Chart*/
+/* global Chart */
 import { getCharacters } from '../data/rickandmorty.js'
 import { buildHTML } from './createCard.js'
 import { allCharacters, gendersFilter, search, speciesFilter, sortByNameUp, sortByNameDown, statusFilter, cardsBox } from './selectors.js'

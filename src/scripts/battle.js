@@ -1,8 +1,6 @@
 import { getNumberOfEpisodes } from './data.js';
 import { battleOne, battleTwo } from './selectors.js'
 
-let selectedCharacterOne = null;
-let selectedCharacterTwo = null;
 const battleCharactersOne = 'battleCharactersOne';
 const battleCharactersTwo = 'battleCharactersTwo';
 
@@ -31,15 +29,9 @@ function renderBattleCharacters (battleCharacters, elementId){
         listBatle.innerHTML = `<img src="${character.image}" alt="${character.image}" class="battle-image" id="${elementId}-${character.id}">`
         battleContainer.appendChild(listBatle)
         listBatle.addEventListener('click', (event) => {
-            if (elementId === battleCharactersOne){
-                selectedCharacterOne = event.currentTarget.dataset.id;
-                const score = getNumberOfEpisodes(battleCharacters, selectedCharacterOne);
-                setCharacterScore (elementId, score);
-            } else {
-                selectedCharacterTwo = event.currentTarget.dataset.id;
-                const score = getNumberOfEpisodes(battleCharacters, selectedCharacterTwo);
-                setCharacterScore (elementId, score);
-            }
+            const selectedCharacterId = event.currentTarget.dataset.id;
+            const score = getNumberOfEpisodes(battleCharacters, selectedCharacterId);
+            setCharacterScore (elementId, score);
             removeSelectedClass(elementId)
             event.currentTarget.classList.add('selected');
         })
