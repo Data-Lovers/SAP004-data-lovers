@@ -311,15 +311,18 @@ h2 {
   margin: 30px;
 }
 
+.battle-character-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .battle {
   display: flex;
   margin: 5px;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.battle li img {
-  width: 80%;
+  width: 30%;
 }
 
 .battle.selected > img {
@@ -327,10 +330,10 @@ h2 {
 }
 
 .battle-characters {
-  margin: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
 }
 
 .versus {
@@ -366,7 +369,11 @@ h2 {
   display: flex;
 }
 
-
+@media (min-width: 961px) {
+  .battle-character-container {
+    width: 50%;
+  }
+}
 
 @media (max-width: 960px) {
   .youknow__box {
